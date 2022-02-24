@@ -1,0 +1,162 @@
+/* les keyframes */
+
+@keyframes remplissage {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes disparition {
+    
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    80% {
+        opacity: 0.2;
+        z-index: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+@keyframes disparition2 {
+    
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    75%{
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes survole {
+    0% {
+        transform: scale(1);
+
+        $couleur_1: lighten($color: $couleur_primaire, $amount: 1);
+        $couleur_2: lighten($color: $couleur_secondaire, $amount: 1);
+        background-image: linear-gradient(180deg, $couleur_2,$couleur_1);
+        box-shadow: 3px 3px 3px rgb(177, 177, 177);
+    }
+    25% {
+        transform: scale(1.05);
+        $couleur_1: lighten($color: $couleur_primaire, $amount: 2);
+        $couleur_2: lighten($color: $couleur_secondaire, $amount: 2);
+        background-image: linear-gradient(90deg, $couleur_2,$couleur_1);
+        box-shadow: 4px 4px 4px rgb(157, 157, 157);
+    }
+    50% {
+        transform: scale(1.10);
+        $couleur_1: lighten($color: $couleur_primaire, $amount: 3);
+        $couleur_2: lighten($color: $couleur_secondaire, $amount: 3);
+        background-image: linear-gradient(90deg, $couleur_2,$couleur_1);
+        box-shadow: 5px 5px 5px rgb(127, 127, 127);
+    }
+    75% {
+        transform: scale(1.05);
+        $couleur_1: lighten($color: $couleur_primaire, $amount: 4);
+        $couleur_2: lighten($color: $couleur_secondaire, $amount: 4);
+        background-image: linear-gradient(90deg, $couleur_2,$couleur_1);
+        box-shadow: 6px 6px 6px rgb(107, 107, 107);
+    }
+    100% {
+        transform: scale(1);
+        $couleur_1: lighten($color: $couleur_primaire, $amount: 5);
+        $couleur_2: lighten($color: $couleur_secondaire, $amount: 5);
+        background-image: linear-gradient(90deg, $couleur_2,$couleur_1);
+        box-shadow: 7px 7px 7px rgb(77, 77, 77);
+    }
+}
+
+/* animations de validation */
+@keyframes validation {
+    0% {
+        transform: scaleX(0) translateX(200%);
+        opacity: 0.1;
+        width: 0%;
+    }
+    100% {
+        transform: scaleX(1) translateX(0%);
+        opacity: 1;
+        width: 15%;
+    }
+}
+@keyframes rotation_val {
+    0% {
+        
+        transform: translateX(400%) rotate(0turn);
+        opacity: 1;
+    }
+    100% {
+        
+        transform: translateX(0%) rotate(2turn);
+        opacity: 1;
+    }
+}
+@keyframes deplacer_val {
+    0% {
+        transform: scaleX(1) translateX(0%);    
+    }
+    100% {
+        transform: scaleX(1) translateX(-30%);
+    }
+}
+/* animations d'apparition */
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+        background-color: darken($color: $couleur_blanche, $amount: 5);
+    }
+    10% {
+        opacity: 0.1;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+        background-color: $couleur_blanche;
+    }
+}
+@keyframes apparition2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        background-color: $couleur_blanche;
+    }
+}

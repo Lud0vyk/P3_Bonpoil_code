@@ -1,0 +1,225 @@
+/* animation de chargement de la page *
+.loader {
+
+	@include anim_chargement_page;
+
+}*/
+/* ***** ***** ***** ***** ***** HEADER ***** ***** ***** ***** ***** */
+
+.logo--page_resto {
+
+    padding: 20px 25px 10px 20px;
+
+    #retour_index {
+        float: left;
+        z-index: 2;
+    }
+    #retour_index2 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.carte_restaurant {
+    
+    width: 100%;
+    @include gris_clair;
+        
+    /* photos des différentes pages */
+    .img_resto_palette {
+        background-image: url("../../images/restaurants/skewer-g975b75408_640.jpg");
+        @include img_page_resto;
+    }
+    .img_resto_note {
+        background-image: url("../../images/restaurants/salad-g9c9304832_640.jpg");
+        @include img_page_resto;
+    }
+    .img_resto_franc {
+        background-image: url("../../images/restaurants/plate-g42b91a4ce_640.jpg");
+        @include img_page_resto;
+    }
+    .img_resto_delice {
+        background-image: url("../../images/restaurants/snack-g729da0406_640.jpg");
+        @include img_page_resto;
+    }
+    
+    .titre--page_resto {
+        @include titre--page_resto;
+
+        h2 {
+            margin-top: 25px;
+            margin-left: 15px;
+        }
+        .coeur {
+           
+            display: flex;
+            align-content: flex-end;
+            justify-content: flex-end;
+
+            margin-top: 25px;
+            margin-right: 40px;
+            @include anim_jaime;
+        }
+    }
+
+    /* les entrées */
+    .entrees {
+        @include gris_clair;
+
+        margin: 15px;
+
+        h3 {
+            padding: 10px 0;
+            
+            span {
+                border-bottom: solid 3px $couleur_tertiaire;
+                padding-bottom: 5px;
+            }
+        }
+        .menu {
+            @include menu;
+           
+           .texte_choix {
+                @include texte_choix;
+                @include anim_chargement_page_resto;
+
+                p {
+                    margin-top: 10px;
+                }
+                
+           }
+           .prix_choix {
+                @include prix_choix;
+                @include anim_chargement_page_resto;
+
+                    h4 {
+                        align-items: flex-end;
+                        padding-right: 15px;
+                        padding-bottom: 10px;
+                    }
+                
+           }
+           .btn_choix {
+                @include btn_choix;
+           }
+
+           &:hover {
+
+                .texte_choix {
+                    width: 70%;
+                    transition:  width 1s ;
+                }
+                .prix_choix {
+                    @include anim_deplacer;
+                }
+                .btn--validation {
+                    @include anim_btn_validation;
+                }
+           }
+        }
+    }
+    
+    /* les plats */
+    .plats {
+        @include gris_clair;
+        margin: 15px;
+
+        h3 {
+            padding: 10px 0;
+            
+            span {
+                border-bottom: solid 3px $couleur_tertiaire;
+                padding-bottom: 5px;
+            }
+        }
+        .menu {
+            @include menu;
+           
+           .texte_choix {
+                @include texte_choix;
+                @include anim_chargement_page_resto;
+
+                p {
+                    margin-top: 10px;
+                }
+           }
+           .prix_choix {
+                @include prix_choix;
+                @include anim_chargement_page_resto;
+
+                    h4 {
+                        align-items: flex-end;
+                        padding-right: 15px;
+                        padding-bottom: 10px;
+                    }
+           }
+           &:hover {
+
+                .texte_choix {
+                    width: 70%;
+                }
+                .prix_choix {
+                    @include anim_deplacer;
+                }
+                .btn--validation {
+                    @include anim_btn_validation;
+                }
+           }
+        }
+    }
+
+    /* les desserts */
+    .desserts {
+        @include gris_clair;
+        margin: 15px;
+
+        h3 {
+            padding: 10px 0;
+            
+            span {
+                border-bottom: solid 3px $couleur_tertiaire;
+                padding-bottom: 5px;
+            }
+        }
+        .menu {
+            @include menu;
+           
+           .texte_choix {
+                @include texte_choix;
+                @include anim_chargement_page_resto;
+
+                p {
+                    margin-top: 10px;
+                }
+           }
+           .prix_choix {
+                @include prix_choix;
+                @include anim_chargement_page_resto;
+
+                    h4 {
+                        align-items: flex-end;
+                        padding-right: 15px;
+                        padding-bottom: 10px;
+                    }
+           }
+           &:hover {
+
+                .texte_choix {
+                    width: 70%;
+                }
+                .prix_choix {
+                    @include anim_deplacer;
+                }
+                .btn--validation {
+                    @include anim_btn_validation;
+                }
+           }
+        }
+    }
+
+    .btn--validation_commande {
+        @include btn_principal;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+}

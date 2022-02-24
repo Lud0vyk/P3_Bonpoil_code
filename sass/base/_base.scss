@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    max-width: 1200px;
+    display: block;
+    flex-direction: column;
+    margin: 0 auto;
+    @include box-shadow;
+}
+
+a {
+    text-decoration:none;
+    color: $couleur_noire;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* *** les icones *** */
+.fas {
+    font-size: 2rem;
+}
+.fa-heart {
+    font-size: 1.5em;
+}
+.fa-check-circle {
+    font-size: 2rem;
+}

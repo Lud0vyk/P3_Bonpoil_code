@@ -1,0 +1,44 @@
+/* *** Les boutons *** */
+@mixin anim_btn_hover {
+    animation: survole .5s ease;
+    animation-delay: .2s;
+    animation-fill-mode: forwards;
+}
+@mixin btn_principal {
+    border-radius: 3rem;
+	border: none;
+	font-weight: bold;
+	color: white;
+	padding-top: 16px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 16px;
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 20px;
+    background-image: linear-gradient(180deg, $couleur_secondaire,$couleur_primaire);
+
+    &:hover {
+        @include anim_btn_hover;
+
+        &:active {
+            animation-fill-mode: backwards;
+        }
+    }
+}
+
+.btn--exploration {
+    @include btn_principal;
+}
+
+.btn--validation {
+
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    color: white;
+    background-color: $couleur_tertiaire;
+    height: 80px;
+    width: 0%;
+    opacity: 0;
+}

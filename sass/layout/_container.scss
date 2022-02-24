@@ -1,0 +1,206 @@
+/* ***** ***** ***** ***** ***** MAIN ***** ***** ***** ***** ***** */
+main {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* *** *** *** 1ère section *** *** *** */
+#section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	padding: 20px 10px 40px 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	@include gris_clair;
+}
+
+/* *** *** *** 2ème section *** *** *** */
+#section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+	padding-left: 30px;
+	padding-right: 20px;
+	padding-bottom: 40px;
+
+	h2 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+.fonct {
+	@include box-shadow;
+	display: flex;
+    flex-direction: row;
+    justify-content: left;
+	margin-bottom: 20px;
+	border-radius: 15px;
+	@include gris_clair;
+
+	&:hover {
+		background-color: lighten($color: $couleur_primaire, $amount: 30);
+
+		i, p:nth-child(1n+2) {
+			color: $couleur_primaire;
+			opacity: 1;
+		}
+	}
+	
+	p:nth-child(1n+2) {
+		padding: 20px 10px;
+		font-weight: bold;
+	}
+	i {
+		padding: 20px 20px;
+		width: 63px;
+		height: 63px;
+		text-align: center;
+		opacity: 40%;
+	}
+	.num {
+		border-radius: 2rem;
+		margin-left: -13px;
+		margin-top: 20px;
+		height: 25px;
+		width: 25px;
+		color: $couleur_blanche;
+		background-color: $couleur_primaire;
+	}
+}
+
+.choisir {
+		.num {
+			padding: 2px 8px 3px 8px;
+		}
+}
+.composer {
+		.num {
+			padding: 2px 8px 3px 8px;
+		}
+}
+.deguster {
+		.num {
+			padding: 2px 8px 3px 8px;
+		}
+}
+
+/* *** *** *** 3ème section *** *** *** */
+#section3 {
+	margin-top: 30px;
+	
+	padding: 40px 20px;
+	width: 100%;
+	//background-color: $couleur_blanche;
+	@include gris_clair;
+
+	h2 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.restaurants {
+		display: flex;
+		flex-direction: column;
+
+		.restaurant {
+			@include box-shadow;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			justify-content: space-between;
+
+			width: 100%;
+			
+			height: 300px;
+			
+			margin-bottom: 25px;
+			background-size: cover;
+			background-position: center;
+			border-radius: 15px;
+	
+
+			.titre {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				border-bottom-left-radius: 15px;
+				
+				padding-left: 15px;
+				margin: auto 0 0 0;
+				background-color: $couleur_blanche;
+				width: 75%;
+				height: 30%;
+
+				h3 {
+					padding-top: 0.7em;
+					padding-bottom: 0.5em;
+				}
+			}
+			.coeur {
+				display: flex;
+				align-content: flex-end;
+				justify-content: flex-end;
+				background-color: white;
+				width: 25%;
+				height: 30%;
+				margin: auto 0 0 0;
+				border-bottom-right-radius: 15px;
+				
+				i {
+					padding-top: 0.7em;
+					padding-right: 0.8em;
+				}
+				@include anim_jaime;
+			}
+		}
+			
+		.nouveau {
+			/* ne pas afficher dans 3 et 4 */
+			float: right;
+			width: 100px;
+			height: 36px;
+			padding-top: 8px;
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: -60px;
+			margin-right: 15px;
+			background-color: $couleur_tertiaire;
+			border-radius: 5px;
+			
+			//opacity: 1;
+			//animation-fill-mode: forwards;
+
+			&:hover {
+
+				//transition: 1s;
+				animation: disparition .5s 0s;
+				//animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+				//animation-direction: unset;
+				//animation-direction: normal;
+				//animation-delay: .2s;
+
+				&::after {
+					opacity: 0;
+					animation-fill-mode: forwards;
+				}
+			}
+		}
+	}	
+}
+
+.menilmontant {
+	background-image: url("../../images/restaurants/chicken-g3741e91db_640.jpg");
+}
+.charonne {
+	background-image: url("../../images/restaurants/food-g6928056cd_640.jpg");
+}
+.cite_rouge {
+	background-image: url("../../images/restaurants/food-ga283ba7db_640.jpg");
+}
+.folie_mericout {
+	background-image: url("../../images/restaurants/pancakes-g23571b0d9_640.jpg");
+}

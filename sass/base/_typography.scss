@@ -1,0 +1,54 @@
+body {
+    @include Roboto;
+    font-size: 2rem;
+}
+
+h1 {
+    @include Shrikhand;
+    font-weight: 900;
+    font-size: 5rem;
+    font-style: italic;
+}
+h2 {
+    @include Roboto;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+h3 {
+    @include Roboto;
+    font-weight: 900;
+}
+footer h3 {
+    @include Shrikhand;
+    font-weight: 400;
+    font-size: 2rem;
+}
+.logo h2 {
+    @include Shrikhand;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.carte_restaurant {
+
+    h2 {
+        @include Shrikhand;
+        font-size: 2.75rem;
+    }
+    h3 {
+        font-weight: 300;
+    }
+    h4 {
+        @include Roboto;
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    p {
+        @include Roboto;
+        font-size: 1.7rem;
+    }
+}
+button {
+    @include Roboto;
+    font-weight: 900;
+    font-size: 1.5rem;
+}

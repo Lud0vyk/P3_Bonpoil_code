@@ -1,0 +1,995 @@
+@charset "UTF-8";
+/* les keyframes */
+@keyframes remplissage {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.2;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes disparition2 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes survole {
+  0% {
+    transform: scale(1);
+    background-image: linear-gradient(180deg, #ff7edb, #965add);
+    box-shadow: 3px 3px 3px #b1b1b1;
+  }
+  25% {
+    transform: scale(1.05);
+    background-image: linear-gradient(90deg, #ff83dd, #985ede);
+    box-shadow: 4px 4px 4px #9d9d9d;
+  }
+  50% {
+    transform: scale(1.1);
+    background-image: linear-gradient(90deg, #ff88de, #9b63df);
+    box-shadow: 5px 5px 5px #7f7f7f;
+  }
+  75% {
+    transform: scale(1.05);
+    background-image: linear-gradient(90deg, #ff8de0, #9e67e0);
+    box-shadow: 6px 6px 6px #6b6b6b;
+  }
+  100% {
+    transform: scale(1);
+    background-image: linear-gradient(90deg, #ff93e1, #a16be0);
+    box-shadow: 7px 7px 7px #4d4d4d;
+  }
+}
+/* animations de validation */
+@keyframes validation {
+  0% {
+    transform: scaleX(0) translateX(200%);
+    opacity: 0.1;
+    width: 0%;
+  }
+  100% {
+    transform: scaleX(1) translateX(0%);
+    opacity: 1;
+    width: 15%;
+  }
+}
+@keyframes rotation_val {
+  0% {
+    transform: translateX(400%) rotate(0turn);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%) rotate(2turn);
+    opacity: 1;
+  }
+}
+@keyframes deplacer_val {
+  0% {
+    transform: scaleX(1) translateX(0%);
+  }
+  100% {
+    transform: scaleX(1) translateX(-30%);
+  }
+}
+/* animations d'apparition */
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+    background-color: #f2f2f2;
+  }
+  10% {
+    opacity: 0.1;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+    background-color: #fff;
+  }
+}
+@keyframes apparition2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background-color: #fff;
+  }
+}
+/* *** pages des restaurants *** */
+/* *** Transitions/animations *** */
+/* au chargement de la page */
+/* *** *** *** */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 1200px;
+  display: block;
+  flex-direction: column;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px #b1b1b1;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* *** les icones *** */
+.fas {
+  font-size: 2rem;
+}
+
+.fa-heart {
+  font-size: 1.5em;
+}
+
+.fa-check-circle {
+  font-size: 2rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+
+h1 {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  font-style: italic;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+
+footer h3 {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.logo h2 {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.carte_restaurant h2 {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+  font-size: 2.75rem;
+}
+.carte_restaurant h3 {
+  font-weight: 300;
+}
+.carte_restaurant h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+.carte_restaurant p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+/* *** Les boutons *** */
+.btn--exploration {
+  border-radius: 3rem;
+  border: none;
+  font-weight: bold;
+  color: white;
+  padding-top: 16px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 16px;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 20px;
+  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+}
+.btn--exploration:hover {
+  animation: survole 0.5s ease;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+.btn--exploration:hover:active {
+  animation-fill-mode: backwards;
+}
+
+.btn--validation {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
+  color: white;
+  background-color: #99E2D0;
+  height: 80px;
+  width: 0%;
+  opacity: 0;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  /* condition pour recentrer l'animation */
+  z-index: 1;
+  /*
+  animation-name: disparition;
+  animation-duration: 1.7s;
+  animation-delay: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  */
+  /* ou */
+  animation: disparition 1.7s 0.2s ease-in-out forwards 1;
+}
+@media (min-width: 1200px) {
+  .loader {
+    margin-right: 65%;
+    margin-left: -15%;
+  }
+}
+.loader i {
+  margin: auto;
+  font-size: 10em;
+  transition: disparition2 1.5s 0s forwards 1;
+}
+
+/* ***** ***** ***** ***** ***** HEADER ***** ***** ***** ***** ***** */
+.logo--index {
+  text-align: center;
+  padding: 15px;
+}
+
+.localisation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #e6e6e6;
+  padding: 5px 0;
+}
+.localisation .fa {
+  color: #000;
+  padding: 15px 10px;
+}
+.localisation form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.localisation input {
+  outline-width: 0;
+  border: none;
+  width: 50%;
+  max-width: 200px;
+  text-align: left;
+}
+.localisation input:focus, .localisation textarea:focus {
+  outline: none;
+}
+.localisation input:focus::placeholder, .localisation textarea:focus::placeholder {
+  color: #fff;
+}
+.localisation .search {
+  color: #000;
+  font-weight: bold;
+  background-color: #e6e6e6;
+  opacity: 1;
+}
+.localisation .search::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+/* ***** ***** ***** ***** ***** MAIN ***** ***** ***** ***** ***** */
+main {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* *** *** *** 1ère section *** *** *** */
+#section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 10px 40px 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+/* *** *** *** 2ème section *** *** *** */
+#section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+#section2 h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.fonct {
+  box-shadow: 5px 5px 5px #b1b1b1;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background-color: #f2f2f2;
+}
+.fonct:hover {
+  background-color: #e4d5f6;
+}
+.fonct:hover i, .fonct:hover p:nth-child(1n+2) {
+  color: #9356DC;
+  opacity: 1;
+}
+.fonct p:nth-child(1n+2) {
+  padding: 20px 10px;
+  font-weight: bold;
+}
+.fonct i {
+  padding: 20px 20px;
+  width: 63px;
+  height: 63px;
+  text-align: center;
+  opacity: 40%;
+}
+.fonct .num {
+  border-radius: 2rem;
+  margin-left: -13px;
+  margin-top: 20px;
+  height: 25px;
+  width: 25px;
+  color: #fff;
+  background-color: #9356DC;
+}
+
+.choisir .num {
+  padding: 2px 8px 3px 8px;
+}
+
+.composer .num {
+  padding: 2px 8px 3px 8px;
+}
+
+.deguster .num {
+  padding: 2px 8px 3px 8px;
+}
+
+/* *** *** *** 3ème section *** *** *** */
+#section3 {
+  margin-top: 30px;
+  padding: 40px 20px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+#section3 h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#section3 .restaurants {
+  display: flex;
+  flex-direction: column;
+}
+#section3 .restaurants .restaurant {
+  box-shadow: 5px 5px 5px #b1b1b1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 25px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+#section3 .restaurants .restaurant .titre {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom-left-radius: 15px;
+  padding-left: 15px;
+  margin: auto 0 0 0;
+  background-color: #fff;
+  width: 75%;
+  height: 30%;
+}
+#section3 .restaurants .restaurant .titre h3 {
+  padding-top: 0.7em;
+  padding-bottom: 0.5em;
+}
+#section3 .restaurants .restaurant .coeur {
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+  background-color: white;
+  width: 25%;
+  height: 30%;
+  margin: auto 0 0 0;
+  border-bottom-right-radius: 15px;
+}
+#section3 .restaurants .restaurant .coeur i {
+  padding-top: 0.7em;
+  padding-right: 0.8em;
+}
+#section3 .restaurants .restaurant .coeur .far {
+  opacity: 1;
+  color: #000;
+}
+#section3 .restaurants .restaurant .coeur .fas {
+  position: absolute;
+  /* coloration du coeur en dégradé */
+  color: transparent;
+  background: linear-gradient(0deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 0.5s;
+  opacity: 0;
+}
+#section3 .restaurants .restaurant .coeur .fas:hover {
+  animation: remplissage 0.7s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+#section3 .restaurants .nouveau {
+  /* ne pas afficher dans 3 et 4 */
+  float: right;
+  width: 100px;
+  height: 36px;
+  padding-top: 8px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: -60px;
+  margin-right: 15px;
+  background-color: #99E2D0;
+  border-radius: 5px;
+}
+#section3 .restaurants .nouveau:hover {
+  animation: disparition 0.5s 0s;
+  animation-fill-mode: forwards;
+}
+#section3 .restaurants .nouveau:hover::after {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.menilmontant {
+  background-image: url("../../images/restaurants/chicken-g3741e91db_640.jpg");
+}
+
+.charonne {
+  background-image: url("../../images/restaurants/food-g6928056cd_640.jpg");
+}
+
+.cite_rouge {
+  background-image: url("../../images/restaurants/food-ga283ba7db_640.jpg");
+}
+
+.folie_mericout {
+  background-image: url("../../images/restaurants/pancakes-g23571b0d9_640.jpg");
+}
+
+/* ***** ***** ***** ***** ***** FOOTER ***** ***** ***** ***** ***** */
+footer {
+  background-color: #333333;
+  padding: 20px 10px;
+  color: #fff;
+}
+
+li {
+  margin: 10px;
+}
+li h3 {
+  margin-left: 20px;
+}
+li a {
+  color: #fff;
+  margin: 20px;
+}
+li a i {
+  margin-right: 15px;
+}
+
+.fa-utensils {
+  margin-right: 24px;
+}
+
+/* animation de chargement de la page *
+.loader {
+
+	@include anim_chargement_page;
+
+}*/
+/* ***** ***** ***** ***** ***** HEADER ***** ***** ***** ***** ***** */
+.logo--page_resto {
+  padding: 20px 25px 10px 20px;
+}
+.logo--page_resto #retour_index {
+  float: left;
+  z-index: 2;
+}
+.logo--page_resto #retour_index2 {
+  width: 100%;
+  text-align: center;
+}
+
+.carte_restaurant {
+  width: 100%;
+  background-color: #f2f2f2;
+  /* photos des différentes pages */
+  /* les entrées */
+  /* les plats */
+  /* les desserts */
+}
+.carte_restaurant .img_resto_palette {
+  background-image: url("../../images/restaurants/skewer-g975b75408_640.jpg");
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  max-height: 50%;
+  min-height: 20%;
+}
+.carte_restaurant .img_resto_note {
+  background-image: url("../../images/restaurants/salad-g9c9304832_640.jpg");
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  max-height: 50%;
+  min-height: 20%;
+}
+.carte_restaurant .img_resto_franc {
+  background-image: url("../../images/restaurants/plate-g42b91a4ce_640.jpg");
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  max-height: 50%;
+  min-height: 20%;
+}
+.carte_restaurant .img_resto_delice {
+  background-image: url("../../images/restaurants/snack-g729da0406_640.jpg");
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  max-height: 50%;
+  min-height: 20%;
+}
+.carte_restaurant .titre--page_resto {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin-top: -20px;
+  padding: 10px;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  background-color: #f2f2f2;
+}
+.carte_restaurant .titre--page_resto h2 {
+  margin-top: 25px;
+  margin-left: 15px;
+}
+.carte_restaurant .titre--page_resto .coeur {
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+  margin-top: 25px;
+  margin-right: 40px;
+}
+.carte_restaurant .titre--page_resto .coeur .far {
+  opacity: 1;
+  color: #000;
+}
+.carte_restaurant .titre--page_resto .coeur .fas {
+  position: absolute;
+  /* coloration du coeur en dégradé */
+  color: transparent;
+  background: linear-gradient(0deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 0.5s;
+  opacity: 0;
+}
+.carte_restaurant .titre--page_resto .coeur .fas:hover {
+  animation: remplissage 0.7s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+.carte_restaurant .entrees {
+  background-color: #f2f2f2;
+  margin: 15px;
+}
+.carte_restaurant .entrees h3 {
+  padding: 10px 0;
+}
+.carte_restaurant .entrees h3 span {
+  border-bottom: solid 3px #99E2D0;
+  padding-bottom: 5px;
+}
+.carte_restaurant .entrees .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 0;
+  overflow: hidden;
+  transition: width 1s;
+  animation: apparition2;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+.carte_restaurant .entrees .menu .texte_choix {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 80px;
+  width: 85%;
+  transition: width 1s;
+  animation: apparition 1s ease;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  /* durée en fonction de l'animation précedédente */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.carte_restaurant .entrees .menu .texte_choix p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.carte_restaurant .entrees .menu .texte_choix h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.carte_restaurant .entrees .menu .texte_choix p {
+  margin-top: 10px;
+}
+.carte_restaurant .entrees .menu .prix_choix {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 80px;
+  width: 15%;
+  background-color: #fff;
+  animation: apparition 1s ease;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  /* durée en fonction de l'animation précedédente */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.carte_restaurant .entrees .menu .prix_choix h4 {
+  align-items: flex-end;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+.carte_restaurant .entrees .menu .btn_choix {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99E2D0;
+  width: 10%;
+  justify-content: center;
+  opacity: 0;
+}
+.carte_restaurant .entrees .menu:hover .texte_choix {
+  width: 70%;
+  transition: width 1s;
+}
+.carte_restaurant .entrees .menu:hover .prix_choix {
+  animation: decalage_val 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.6s;
+}
+.carte_restaurant .entrees .menu:hover .btn--validation {
+  animation: validation 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+.carte_restaurant .entrees .menu:hover .btn--validation i {
+  animation: rotation_val 1s;
+  animation-delay: 0.6s;
+}
+.carte_restaurant .plats {
+  background-color: #f2f2f2;
+  margin: 15px;
+}
+.carte_restaurant .plats h3 {
+  padding: 10px 0;
+}
+.carte_restaurant .plats h3 span {
+  border-bottom: solid 3px #99E2D0;
+  padding-bottom: 5px;
+}
+.carte_restaurant .plats .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 0;
+  overflow: hidden;
+  transition: width 1s;
+  animation: apparition2;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+.carte_restaurant .plats .menu .texte_choix {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 80px;
+  width: 85%;
+  transition: width 1s;
+  animation: apparition 1s ease;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  /* durée en fonction de l'animation précedédente */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.carte_restaurant .plats .menu .texte_choix p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.carte_restaurant .plats .menu .texte_choix h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.carte_restaurant .plats .menu .texte_choix p {
+  margin-top: 10px;
+}
+.carte_restaurant .plats .menu .prix_choix {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 80px;
+  width: 15%;
+  background-color: #fff;
+  animation: apparition 1s ease;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  /* durée en fonction de l'animation précedédente */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.carte_restaurant .plats .menu .prix_choix h4 {
+  align-items: flex-end;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+.carte_restaurant .plats .menu:hover .texte_choix {
+  width: 70%;
+}
+.carte_restaurant .plats .menu:hover .prix_choix {
+  animation: decalage_val 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.6s;
+}
+.carte_restaurant .plats .menu:hover .btn--validation {
+  animation: validation 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+.carte_restaurant .plats .menu:hover .btn--validation i {
+  animation: rotation_val 1s;
+  animation-delay: 0.6s;
+}
+.carte_restaurant .desserts {
+  background-color: #f2f2f2;
+  margin: 15px;
+}
+.carte_restaurant .desserts h3 {
+  padding: 10px 0;
+}
+.carte_restaurant .desserts h3 span {
+  border-bottom: solid 3px #99E2D0;
+  padding-bottom: 5px;
+}
+.carte_restaurant .desserts .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 0;
+  overflow: hidden;
+  transition: width 1s;
+  animation: apparition2;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+.carte_restaurant .desserts .menu .texte_choix {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 80px;
+  width: 85%;
+  transition: width 1s;
+  animation: apparition 1s ease;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  /* durée en fonction de l'animation précedédente */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.carte_restaurant .desserts .menu .texte_choix p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.carte_restaurant .desserts .menu .texte_choix h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.carte_restaurant .desserts .menu .texte_choix p {
+  margin-top: 10px;
+}
+.carte_restaurant .desserts .menu .prix_choix {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 80px;
+  width: 15%;
+  background-color: #fff;
+  animation: apparition 1s ease;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  /* durée en fonction de l'animation précedédente */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.carte_restaurant .desserts .menu .prix_choix h4 {
+  align-items: flex-end;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+.carte_restaurant .desserts .menu:hover .texte_choix {
+  width: 70%;
+}
+.carte_restaurant .desserts .menu:hover .prix_choix {
+  animation: decalage_val 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.6s;
+}
+.carte_restaurant .desserts .menu:hover .btn--validation {
+  animation: validation 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+.carte_restaurant .desserts .menu:hover .btn--validation i {
+  animation: rotation_val 1s;
+  animation-delay: 0.6s;
+}
+.carte_restaurant .btn--validation_commande {
+  border-radius: 3rem;
+  border: none;
+  font-weight: bold;
+  color: white;
+  padding-top: 16px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 16px;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 20px;
+  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.carte_restaurant .btn--validation_commande:hover {
+  animation: survole 0.5s ease;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+.carte_restaurant .btn--validation_commande:hover:active {
+  animation-fill-mode: backwards;
+}
+
+/*# sourceMappingURL=style.css.map */

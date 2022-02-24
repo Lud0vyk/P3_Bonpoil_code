@@ -1,0 +1,25 @@
+/* ***** ***** ***** ***** ***** FOOTER ***** ***** ***** ***** ***** */
+footer {
+    background-color: lighten($color: $couleur_noire, $amount: 20);
+    padding: 20px 10px;
+    color: $couleur_blanche;
+}
+li {
+    margin: 10px;
+
+    h3 {
+        margin-left: 20px;
+    }
+
+    a {
+    color: $couleur_blanche;
+    margin: 20px;
+
+        i {
+            margin-right: 15px;
+        }
+    }
+}
+.fa-utensils {
+    margin-right: 24px;
+}
