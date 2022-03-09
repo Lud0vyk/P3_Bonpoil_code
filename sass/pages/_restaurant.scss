@@ -1,9 +1,3 @@
-/* animation de chargement de la page *
-.loader {
-
-	@include anim_chargement_page;
-
-}*/
 /* ***** ***** ***** ***** ***** HEADER ***** ***** ***** ***** ***** */
 
 .logo--page_resto {
@@ -27,19 +21,18 @@
         
     /* photos des différentes pages */
     .img_resto_palette {
-        background-image: url("../../images/restaurants/skewer-g975b75408_640.jpg");
-        @include img_page_resto;
+        background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     }
     .img_resto_note {
-        background-image: url("../../images/restaurants/salad-g9c9304832_640.jpg");
-        @include img_page_resto;
+        background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     }
     .img_resto_franc {
-        background-image: url("../../images/restaurants/plate-g42b91a4ce_640.jpg");
-        @include img_page_resto;
+        background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
     }
     .img_resto_delice {
-        background-image: url("../../images/restaurants/snack-g729da0406_640.jpg");
+        background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    }
+    .page_resto {
         @include img_page_resto;
     }
     
