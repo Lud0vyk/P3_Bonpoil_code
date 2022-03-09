@@ -967,4 +967,12 @@ li a i {
   animation-fill-mode: backwards;
 }
 
+/* page contact */
+#contact_page {
+  height: 160px;
+  margin: 50px;
+  font-family: "Shrikhand", "Roboto", sans-serif;
+  text-align: left;
+}
+
 /*# sourceMappingURL=style.css.map */
