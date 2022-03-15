@@ -169,19 +169,11 @@ main {
 			margin-right: 15px;
 			background-color: $couleur_tertiaire;
 			border-radius: 5px;
-			
-			//opacity: 1;
-			//animation-fill-mode: forwards;
 
 			&:hover {
 
-				//transition: 1s;
 				animation: disparition .5s 0s;
-				//animation-iteration-count: 1;
 				animation-fill-mode: forwards;
-				//animation-direction: unset;
-				//animation-direction: normal;
-				//animation-delay: .2s;
 
 				&::after {
 					opacity: 0;

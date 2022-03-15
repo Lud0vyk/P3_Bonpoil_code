@@ -291,6 +291,8 @@ button {
   display: flex;
   /* condition pour recentrer l'animation */
   z-index: 1;
+  animation: disparition 1.7s 0.2s ease-in-out forwards 1;
+  /* ou */
   /*
   animation-name: disparition;
   animation-duration: 1.7s;
@@ -299,19 +301,16 @@ button {
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   */
-  /* ou */
-  animation: disparition 1.7s 0.2s ease-in-out forwards 1;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   .loader {
-    margin-right: 65%;
-    margin-left: -15%;
+    margin-right: 50%;
   }
 }
 .loader i {
   margin: auto;
   font-size: 10em;
-  transition: disparition2 1.5s 0s forwards 1;
+  transition: ease-out 1.5s 0s;
 }
 
 /* ***** ***** ***** ***** ***** HEADER ***** ***** ***** ***** ***** */
@@ -965,14 +964,6 @@ li a i {
 }
 .carte_restaurant .btn--validation_commande:hover:active {
   animation-fill-mode: backwards;
-}
-
-/* page contact */
-#contact_page {
-  height: 160px;
-  margin: 50px;
-  font-family: "Shrikhand", "Roboto", sans-serif;
-  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */

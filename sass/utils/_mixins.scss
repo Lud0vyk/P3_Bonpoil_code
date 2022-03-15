@@ -126,27 +126,25 @@
 	display: flex;
     
     /* condition pour recentrer l'animation */
-    @media (min-width: 1200px) {
-        margin-right: 65%;
-        margin-left: -15%;
+    @media (min-width: 1201px) {
+        margin-right: 50%;
     }
 	
 	i { 	
         margin: auto;
 		font-size: 10em;
-        transition: disparition2 1.5s 0s forwards 1;
+        transition: ease-out 1.5s 0s;
 	}
 	z-index: 1;
-
-    /*
+    animation: disparition 1.7s 0.2s ease-in-out forwards 1;
+    /* ou *//*
     animation-name: disparition;
     animation-duration: 1.7s;
     animation-delay: 0.2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-    */ /* ou */
-    animation: disparition 1.7s 0.2s ease-in-out forwards 1;
+    */ 
 }
 @mixin anim_chargement_page_resto {
     animation: apparition 1s ease;
